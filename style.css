@@ -1,0 +1,280 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #151f28;
+    overflow: hidden;
+}
+
+.login-box {
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: #191919;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    transition: 0.5s ease;
+}
+
+.input-check:checked ~ h2 {
+    color: #00f7ff;
+    text-shadow: 0 0 15px #00f7ff, 0 0 30px #00f7ff;
+}
+
+.input-box {
+    position: relative;
+    width: 310px;
+    margin: 30px 0;
+}
+
+.input-box .input-line {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    background: #fff;
+    transition: 0.5s ease;
+}
+
+.input-check:checked ~ .input-box .input-line {
+    background: #00f7ff;
+    box-shadow: 0 0 10px #00f7ff;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -5px;
+}
+
+.input-check:checked ~ .input-box label {
+    color: #00f7ff;
+    text-shadow: 0 0 10px #00f7ff;
+}
+
+.input-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 8px 35px 0 5px;
+    transition: 0.5s ease;
+}
+
+.input-check:checked ~ .input-box input {
+    color: #00f7ff;
+    text-shadow: 0 0 5px #00f7ff;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 57px;
+    transition: 0.5s ease;
+}
+
+.input-check:checked ~ .input-box .icon {
+    color: #00f7ff;
+    filter: drop-shadow(0 6px 5px #00f7ff);
+}
+
+.remember-forgot {
+    color: #fff;
+    font-size: 0.9em;
+    margin: 15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s ease;
+}
+
+.input-check:checked ~ .remember-forgot {
+    color: #00f7ff;
+    text-shadow: 0 0 10px #00f7ff;
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 3px;
+    transition: 0.5s ease;
+}
+
+.input-check:checked ~ .remember-forgot label input {
+    accent-color: #00f7ff;
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.input-check:checked ~ .remember-forgot a {
+    color: #00f7ff;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #191919;
+    font-weight: 500;
+    transition: 0.5s ease;
+}
+
+.input-check:checked ~ button {
+    background: #00f7ff;
+    box-shadow: 0 0 15px #00f7ff, 0 0 15px #00f7ff;
+}
+
+.register-link {
+    color: #fff;
+    font-size: 0.9em;
+    text-align: center;
+    margin: 25px 0 10px;
+    transition: 0.5s ease;
+}
+
+.input-check:checked ~ .register-link {
+    color: #00f7ff;
+    text-shadow: 0 0 10px #00f7ff;
+}
+
+.register-link a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.5s ease;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.input-check:checked ~ .register-link a {
+    color: #00f7ff;
+}
+
+.light {
+    position: absolute;
+    top: -300%;
+    left: 0;
+    width: 100%;
+    height: 850px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+
+.input-check:checked ~ .light {
+    top: -90%;
+}
+
+.toggle {
+    position: absolute;
+    top: 20px;
+    right: -70px;
+    width: 60px;
+    height: 120px;
+    background: #191919;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.toggle .text {
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+
+.toggle .on {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s ease;
+}
+
+.toggle .off {
+    opacity: 1;
+    transform: translateY(-20px);
+    transition: 0.5s ease;
+}
+
+.input-check:checked ~ .toggle .on {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.input-check:checked ~ .toggle .off {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.toggle::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45px;
+    height: 45px;
+    background: #333;
+    border: 2px solid #191919;
+    border-radius: 18px;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease;
+}
+
+.input-check:checked ~ .toggle::after {
+    top: 65px;
+}
